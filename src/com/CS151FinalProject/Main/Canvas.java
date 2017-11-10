@@ -33,7 +33,7 @@ public class Canvas extends JPanel {
 		super.paintComponent(g);
 
 		for (DShape shape : shapes) {
-			g.setColor(shape.getModel().getColor());
+			System.out.println(shape.getModel().getHeight() + "\t" + shape.getModel().getWidth());
 			shape.draw(g);
 
 		}

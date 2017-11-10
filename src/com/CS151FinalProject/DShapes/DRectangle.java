@@ -11,14 +11,15 @@ public class DRectangle extends DShape {
 
 		super();
 
-		model = new DRectangleModel();
+		this.setModel(new DRectangleModel());
 
 	}
 
 	@Override
 	public void draw(Graphics g) {
 
-		g.drawRect(model.getX(), model.getY(), model.getWidth(), model.getHeight());
+		g.drawRect(this.getModel().getX(), this.getModel().getY(), this.getModel().getWidth(),
+				this.getModel().getHeight());
 
 	}
 

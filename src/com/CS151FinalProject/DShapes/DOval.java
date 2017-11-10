@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 import com.CS151FinalProject.DModel.DOvalModel;
 //import com.CS151FinalProject.DModel.DRectangleModel;
+import com.CS151FinalProject.DModel.DRectangleModel;
 
 public class DOval extends DShape {
 
@@ -11,14 +12,14 @@ public class DOval extends DShape {
 
 		super();
 
-		model = new DOvalModel();
+		 this.setModel(new DOvalModel());
 
 	}
 
 	@Override
 	public void draw(Graphics g) {
 
-		g.drawOval(model.getX(), model.getY(), model.getWidth(), model.getHeight());
+		g.drawOval(this.getModel().getX(), this.getModel().getY(), this.getModel().getWidth(), this.getModel().getHeight());
 
 	}
 

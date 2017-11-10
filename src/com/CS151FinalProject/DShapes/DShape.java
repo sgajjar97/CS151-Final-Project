@@ -18,6 +18,10 @@ public class DShape {
 	public DShapeModel getModel() {
 		return model;
 	}
+	
+	public void setModel(DShapeModel model){
+		this.model = model;
+	}
 
 	public void draw(Graphics g) {
 

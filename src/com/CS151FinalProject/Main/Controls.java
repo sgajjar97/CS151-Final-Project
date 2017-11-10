@@ -53,7 +53,7 @@ public class Controls {
 		rectangle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				DShape rect = new DRectangle();
+				DRectangle rect = new DRectangle();
 
 				rect.getModel().setX(10);
 
@@ -73,7 +73,7 @@ public class Controls {
 		oval.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				DShape oval = new DOval();
+				DOval oval = new DOval();
 
 				oval.getModel().setX(20);
 
