@@ -1,14 +1,20 @@
 package com.CS151FinalProject.DModel;
 
 import java.awt.Color;
+import java.awt.Rectangle;
+import java.util.ArrayList;
+
+import com.CS151FinalProject.Main.ModelListener;
 
 public class DShapeModel {
 
-	int x, y;
+	private int x, y;
 
-	int width, height;
+	private int width, height;
 
-	Color color;
+	private Color color;
+
+	private ArrayList<ModelListener> listeners = new ArrayList<>();
 
 	public DShapeModel() {
 
@@ -22,6 +28,10 @@ public class DShapeModel {
 
 		color = Color.gray;
 
+	}
+
+	public Rectangle getBounds() {
+		return new Rectangle(getX(), getY(), getWidth() + 9, getHeight() + 9);
 	}
 
 	public Color getColor() {
@@ -62,6 +72,25 @@ public class DShapeModel {
 
 	public void setHeight(int height) {
 		this.height = height;
+	}
+
+	public void addListener(ModelListener listener) {
+		listeners.add(listener);
+	}
+
+	public void removeListener(ModelListener listener) {
+		listeners.remove(listener);
+	}
+
+	public void notifyListeners() {
+
+		for (ModelListener listener : listeners)
+			listener.modelChanged(DShapeModel.this);
+
+	}
+
+	public ArrayList<ModelListener> getListeners() {
+		return listeners;
 	}
 
 }

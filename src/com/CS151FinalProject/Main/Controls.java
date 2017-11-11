@@ -4,6 +4,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.Box;
 //import javax.swing.BoxLayout;
@@ -17,6 +18,8 @@ import javax.swing.JTextField;
 import com.CS151FinalProject.DShapes.*;
 
 public class Controls {
+
+	Random rand = new Random();
 
 	String[] fonts = { "Arial", "Times New Roman" };
 
@@ -53,15 +56,21 @@ public class Controls {
 		rectangle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
+				int place = rand.nextInt(100) + 1;
+
+				int size = rand.nextInt(100) + 20;
+
+				//System.out.println("Place\t" + place);
+
 				DRectangle rect = new DRectangle();
 
-				rect.getModel().setX(10);
+				rect.getModel().setX(place);
 
-				rect.getModel().setY(10);
+				rect.getModel().setY(place);
 
-				rect.getModel().setWidth(50);
+				rect.getModel().setWidth(size);
 
-				rect.getModel().setHeight(50);
+				rect.getModel().setHeight(size);
 
 				WhiteBoard.getWhiteBoard().canvas.addShape(rect);
 
@@ -73,15 +82,19 @@ public class Controls {
 		oval.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
+				int place = rand.nextInt(100) + 1;
+
+				int size = rand.nextInt(100) + 20;
+
 				DOval oval = new DOval();
 
-				oval.getModel().setX(20);
+				oval.getModel().setX(place);
 
-				oval.getModel().setY(20);
+				oval.getModel().setY(place);
 
-				oval.getModel().setWidth(50);
+				oval.getModel().setWidth(size);
 
-				oval.getModel().setHeight(50);
+				oval.getModel().setHeight(size);
 
 				WhiteBoard.getWhiteBoard().canvas.addShape(oval);
 
