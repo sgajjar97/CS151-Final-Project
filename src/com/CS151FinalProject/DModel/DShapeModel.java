@@ -39,7 +39,11 @@ public class DShapeModel {
 	}
 
 	public void setColor(Color color) {
+
 		this.color = color;
+
+		notifyListeners();
+
 	}
 
 	public int getX() {
@@ -48,6 +52,8 @@ public class DShapeModel {
 
 	public void setX(int x) {
 		this.x = x;
+
+		notifyListeners();
 	}
 
 	public int getY() {
@@ -56,6 +62,8 @@ public class DShapeModel {
 
 	public void setY(int y) {
 		this.y = y;
+
+		notifyListeners();
 	}
 
 	public int getWidth() {
@@ -64,6 +72,8 @@ public class DShapeModel {
 
 	public void setWidth(int width) {
 		this.width = width;
+
+		notifyListeners();
 	}
 
 	public int getHeight() {
@@ -72,6 +82,8 @@ public class DShapeModel {
 
 	public void setHeight(int height) {
 		this.height = height;
+
+		notifyListeners();
 	}
 
 	public void addListener(ModelListener listener) {

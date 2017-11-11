@@ -81,8 +81,12 @@ public class Canvas extends JPanel implements ModelListener {
 
 		@Override
 		public void mouseDragged(MouseEvent e) {
-			// TODO Auto-generated method stub
-
+			
+			
+			
+			
+			
+			
 		}
 
 		@Override

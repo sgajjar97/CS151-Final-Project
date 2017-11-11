@@ -9,6 +9,7 @@ import java.util.Random;
 import javax.swing.Box;
 //import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JColorChooser;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
@@ -60,7 +61,7 @@ public class Controls {
 
 				int size = rand.nextInt(100) + 20;
 
-				//System.out.println("Place\t" + place);
+				// System.out.println("Place\t" + place);
 
 				DRectangle rect = new DRectangle();
 
@@ -106,6 +107,16 @@ public class Controls {
 		text = new JButton("Text");
 
 		setColor = new JButton("Color");
+
+		setColor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				if (WhiteBoard.getWhiteBoard().canvas.selectedShape != null)
+					WhiteBoard.getWhiteBoard().canvas.selectedShape.getModel().setColor(JColorChooser.showDialog(null,
+							"Set Color", WhiteBoard.getWhiteBoard().canvas.selectedShape.getModel().getColor()));
+
+			}
+		});
 
 		moveToFront = new JButton("Move to Front");
 
