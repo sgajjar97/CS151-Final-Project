@@ -2,6 +2,7 @@ package com.CS151FinalProject.DShapes;
 
 import java.awt.Graphics;
 import java.awt.Point;
+import java.awt.Rectangle;
 
 import com.CS151FinalProject.DModel.*;
 //import com.CS151FinalProject.Main.*;
@@ -16,6 +17,11 @@ public class DShape {
 	public DShape() 
 	{
 		info = new DShapeModel();
+	}
+	
+	public Rectangle getBounds()
+	{
+		return info.getBounds();
 	}
 
 	public DShapeModel getModel() {
