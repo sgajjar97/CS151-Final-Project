@@ -29,6 +29,15 @@ public class DShapeModel {
 		color = Color.gray;
 
 	}
+	
+	public DShapeModel(int x, int y, int w, int h)
+	{
+		this.x = x;
+		this.y = y;
+		width = w;
+		height = h;
+		this.color = Color.GRAY;
+	}
 
 	public Rectangle getBounds() {
 		return new Rectangle(getX(), getY(), getWidth() + 9, getHeight() + 9);
