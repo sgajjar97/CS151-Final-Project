@@ -9,11 +9,13 @@ import com.CS151FinalProject.DModel.*;
 public class DShape {
 
 	DShapeModel model;
+	public DShapeModel info;
 
 	// private WhiteBoard whiteBoard;
 
-	public DShape() {
-
+	public DShape() 
+	{
+		info = new DShapeModel();
 	}
 
 	public DShapeModel getModel() {
